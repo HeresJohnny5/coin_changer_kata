@@ -11,10 +11,12 @@
 # Start a new repo
 # Build up your coin_changer using tests. Commit to git after every test.
 
-def test_hash_keys(money)
-	money.keys.include?(:penny)
-end
-
-def test_hash_keys(money)
-	money.keys.include?(:pennys)
+def test_hash_values?(amount, currency)
+	# amount = 1 or "one"
+	# currency = { :penny => 1, :nickel => 5, :dime => 10, :quarter => 25 }
+	if currency[:penny] == amount
+		true
+	else
+		false
+	end
 end

@@ -15,14 +15,16 @@ require_relative "coin_change_kata.rb"
 
 class TestTicket < Minitest::Test 
 
-	def test_if_hash_includes_key_return_true
-		money = { :penny => 1, :nickel => 5, :dime => 10, :quarter => 25 }
-		assert_equal(true, test_hash_keys(money))
+	def test_if_hash_includes_amount_return_true
+		currency = { :penny => 1, :nickel => 5, :dime => 10, :quarter => 25 }
+		amount = 1
+		assert_equal(true, test_hash_values?(amount, currency))
 	end
 
-	def test_if_hash_includes_key_return_false
-		money = { :penny => 1, :nickel => 5, :dime => 10, :quarter => 25 }
-		assert_equal(false, test_hash_keys(money))
+	def test_if_hash_does_not_include_amount_return_false
+		currency = { :penny => 1, :nickel => 5, :dime => 10, :quarter => 25 }
+		amount = "one"
+		assert_equal(false, test_hash_values?(amount, currency))
 	end
 
 end

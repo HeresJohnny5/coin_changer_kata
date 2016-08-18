@@ -12,18 +12,23 @@ require_relative "coin_change_kata.rb"
 
 class TestTicket < Minitest::Test 
 
-	def test_if_function_returns_true
-		# currency = [["Quarters", 0.25], ["Dimes", 0.10], ["Nickels", 0.05], ["Pennies", 0.01]]
+	def test_if_amount_in_array_returns_true
 		amounts = [9.50, 0.96, 0.75, 3.06, 5.25]
 		test_amount = 9.50
-		assert_equal(true, amount_in_array?(test_amount, amounts))
+		assert_equal(true, amount_in_array(test_amount, amounts))
 	end
 
-	def test_if_function_returns_false
-		# currency = [["Quarters", 0.25], ["Dimes", 0.10], ["Nickels", 0.05], ["Pennies", 0.01]]
+	def test_if_amount_in_array_returns_false
 		amounts = [9.50, 0.96, 0.75, 3.06, 5.25]
 		test_amount = 9.51
-		assert_equal(false, amount_in_array?(test_amount, amounts))
+		assert_equal(false, amount_in_array(test_amount, amounts))
+	end
+
+	def test_if_currency_in_array_returns_true
+		currency = [["Quarters", 0.25], ["Dimes", 0.10], ["Nickels", 0.05], ["Pennies", 0.01]]
+		amounts = [9.50, 0.96, 0.75, 3.06, 5.25]
+		test_amount = "Quarters"
+		assert_equal(true, currency_in_array(test_amount, currency))
 	end
 
 end

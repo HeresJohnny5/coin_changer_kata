@@ -9,14 +9,20 @@
 # Start a new repo
 # Build up your coin_changer using tests. Commit to git after every test.
 
-def amount_in_array?(test_amount, amounts)
+def amount_in_array(test_amount, amounts)
 	# amounts = [9.50, 0.96, 0.75, 3.06, 5.25]
 	# test_amount = 9.50
 	amounts.include?(test_amount)
 end
 
 
-
+def currency_in_array(test_amount, currency)
+	# currency = [["Quarters", 0.25], ["Dimes", 0.10], ["Nickels", 0.05], ["Pennies", 0.01]]
+	# test_amount = "Quarters"
+	currency.each do |index|
+		index[0].include?(test_amount)
+	end
+end
 
 
 

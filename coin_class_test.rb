@@ -11,4 +11,8 @@ class TestCoinChanger < Minitest::Test
 		assert_equal({:penny => 1}, generate_change(1))	
 	end
 
+	def test_two_cents_returns_hash_with_two_pennys
+		assert_equal({:penny => 2}, generate_change(2))	
+	end
+
 end

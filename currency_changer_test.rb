@@ -12,27 +12,43 @@ class TestCurrencyChanger < Minitest::Test
 	# end
 
 	def test_returns_hash_with_key_quarter_value_one_when_passed_argument_twenty_five
-		assert_equal({:Quarter => 1}, generate_currency(25))
+		assert_equal({ :Quarter => 1 }, generate_currency(25))
+	end
+
+	def test_returns_hash_with_key_dime_value_one_key_nickel_value_one_key_penny_value_three_when_passed_argument_eighteen
+		assert_equal({ :Dime => 1, :Nickel => 1, :Penny => 3 }, generate_currency(18))
+	end
+
+	def test_returns_hash_with_key_dime_value_one_key_nickel_value_one_when_passed_argument_fifteen
+		assert_equal({ :Dime => 1, :Nickel => 1 }, generate_currency(15))
+	end
+
+	def test_returns_hash_with_key_dime_value_one_key_penny_value_two_when_passed_argument_twelve
+		assert_equal({ :Dime => 1, :Penny => 2 }, generate_currency(12))
 	end
 
 	def test_returns_hash_with_key_dime_value_one_when_passed_argument_ten
-		assert_equal({:Dime => 1}, generate_currency(10))
+		assert_equal({ :Dime => 1 }, generate_currency(10))
+	end
+
+	def test_returns_hash_with_key_nickel_value_one_key_penny_value_one_when_passed_argument_six
+		assert_equal({ :Nickel => 1, :Penny => 1 }, generate_currency(6))
 	end
 
 	def test_returns_hash_with_key_nickel_value_one_when_passed_argument_five
-		assert_equal({:Nickel => 1}, generate_currency(5))
+		assert_equal({ :Nickel => 1 }, generate_currency(5))
 	end
 
 	def test_returns_hash_with_key_penny_value_three_when_passed_argument_three
-		assert_equal({:Penny => 3}, generate_currency(3))
+		assert_equal({ :Penny => 3 }, generate_currency(3))
 	end
 
 	def test_returns_hash_with_key_penny_value_two_when_passed_argument_two
-		assert_equal({:Penny => 2}, generate_currency(2))
+		assert_equal({ :Penny => 2 }, generate_currency(2))
 	end
 
 	def test_returns_hash_with_key_penny_value_one_when_passed_argument_one
-		assert_equal({:Penny => 1}, generate_currency(1))
+		assert_equal({ :Penny => 1 }, generate_currency(1))
 	end
 
 end

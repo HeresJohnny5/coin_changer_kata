@@ -11,3 +11,7 @@
 6. I commented out both tests and code for :Nickel and :Dime. I added one additional line of code for the conditional 25 >= 25; num = num - 25. This changes num from 25 to 0. I also removed the test_returns_empty_hash as :Penny is the lowest currency value. 2 tests run; :Quarter and :Penny. Both pass. 
 
 7. I uncommented both the test and code for :Nickel and :Dime. I added num = num - 10 for the :Dime conditional and num = num - 5 for the :Nickel conditional. 4 test run/4 test pass.
+
+8. I added two new tests, one returning :Penny => 3 and the other returning :Penny => 2. Unlike conditional statements prior I didn't need to add any new code. I changed the hash to equal the parameter num.
+
+9. I added three new tests, one passing the argument eighteen, one passing the argument fifteen, one passing the argument twelve.

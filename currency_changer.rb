@@ -26,7 +26,7 @@ def generate_currency(num)
 	end
 
 	if num >= 1
-		currency_hash[:Penny] = 1
+		currency_hash[:Penny] = num
 	end
 
 	currency_hash

@@ -2,4 +2,6 @@
 
 2. I then created a generic test to see if the function generate_currency would return a empty hash. I did this to make certain everything was in working order.
 
-3. I decided to start running tests at { :Quarter => 1 } in hopes of preventing dependency on Thursday's lecture. I created a empty hash and conditional statement. Both tests passed w/ 0 failure/error.
+3. I decided to start running tests at { :Quarter => 1 } in hopes of preventing dependency on Thursday's lecture. I created a empty hash and conditional statement. If num(25) >= 25 access currency_hash, creating key :Quarter, value = one, else return currency_hash as is, which is empty.
+
+4. After getting the previous example to pass I decided to write 3 different tests, one to return hash { :Dime => 1 }, one to return { :Nickel => 1 } and one to return { :penny => 1 }. Rather make one conditional I made several separate conditional, one for num >= 25, one for num >= 10, one for num >= 5, one for num >= 1 and one for num == 0. I received 3 failures; expected and actual did not match.

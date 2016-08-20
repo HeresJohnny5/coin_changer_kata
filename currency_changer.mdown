@@ -9,3 +9,5 @@
 5. Looking at the error I realized the issue. For example 25 >= 25 which returns :Quarter => 1, however it also returns :Dime => 1, :Nickel => 1 and :Penny => 1. I need some way to reduce the parameter of num, so that it only passes for 25 >= 25 and fails every other conditional statement.
 
 6. I commented out both tests and code for :Nickel and :Dime. I added one additional line of code for the conditional 25 >= 25; num = num - 25. This changes num from 25 to 0. I also removed the test_returns_empty_hash as :Penny is the lowest currency value. 2 tests run; :Quarter and :Penny. Both pass. 
+
+7. I uncommented both the test and code for :Nickel and :Dime. 4 test run/4 test pass.

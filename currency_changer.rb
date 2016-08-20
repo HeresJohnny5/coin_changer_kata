@@ -15,13 +15,15 @@ def generate_currency(num)
 		num = num - 25
 	end
 
-	# if num >= 10
-	# 	currency_hash[:Dime] = 1
-	# end
+	if num >= 10
+		currency_hash[:Dime] = 1
+		num = num - 10
+	end
 
-	# if num >= 5
-	# 	currency_hash[:Nickel] = 1
-	# end
+	if num >= 5
+		currency_hash[:Nickel] = 1
+		num = num - 5
+	end
 
 	if num >= 1
 		currency_hash[:Penny] = 1

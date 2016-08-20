@@ -1,0 +1,5 @@
+1. My first task was to create a currency_changer_test.rb boilerplate linking the test to currency_changer.rb.
+
+2. I then created a generic test to see if the function generate_currency would return a empty hash. I did this to make certain everything was in working order.
+
+3. I decided to start running tests at { :Quarter => 1 } in hopes of preventing dependency on Thursday's lecture. I created a empty hash and conditional statement. Both tests passed w/ 0 failure/error.

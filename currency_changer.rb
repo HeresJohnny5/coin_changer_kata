@@ -12,23 +12,21 @@ def generate_currency(num)
 
 	if num >= 25
 		currency_hash[:Quarter] = 1
+		num = num - 25
 	end
 
-	if num >= 10
-		currency_hash[:Dime] = 1
-	end
+	# if num >= 10
+	# 	currency_hash[:Dime] = 1
+	# end
 
-	if num >= 5
-		currency_hash[:Nickel] = 1
-	end
+	# if num >= 5
+	# 	currency_hash[:Nickel] = 1
+	# end
 
 	if num >= 1
 		currency_hash[:Penny] = 1
 	end
 
-	if num == 0
-		currency_hash
-	end
 	currency_hash
 
 end

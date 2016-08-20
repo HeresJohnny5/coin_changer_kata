@@ -5,3 +5,7 @@
 3. I decided to start running tests at { :Quarter => 1 } in hopes of preventing dependency on Thursday's lecture. I created a empty hash and conditional statement. If num(25) >= 25 access currency_hash, creating key :Quarter, value = one, else return currency_hash as is, which is empty.
 
 4. After getting the previous example to pass I decided to write 3 different tests, one to return hash { :Dime => 1 }, one to return { :Nickel => 1 } and one to return { :penny => 1 }. Rather make one conditional I made several separate conditional, one for num >= 25, one for num >= 10, one for num >= 5, one for num >= 1 and one for num == 0. I received 3 failures; expected and actual did not match.
+
+5. Looking at the error I realized the issue. For example 25 >= 25 which returns :Quarter => 1, however it also returns :Dime => 1, :Nickel => 1 and :Penny => 1. I need some way to reduce the parameter of num, so that it only passes for 25 >= 25 and fails every other conditional statement.
+
+6. I commented out both tests and code for :Nickel and :Dime. I added one additional line of code for the conditional 25 >= 25; num = num - 25. This changes num from 25 to 0. I also removed the test_returns_empty_hash as :Penny is the lowest currency value. 2 tests run; :Quarter and :Penny. Both pass. 

@@ -10,6 +10,11 @@
 def generate_currency(num)
 	currency_hash = Hash.new
 
+	# if num >= 100
+	# 	currency_hash[:Dollar] = 1
+	# 	num = num - 100
+	# end
+
 	if num >= 25
 		currency_hash[:Quarter] = 1
 		num = num - 25

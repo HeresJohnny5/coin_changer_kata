@@ -15,3 +15,5 @@
 8. I added two new tests, one returning :Penny => 3 and the other returning :Penny => 2. Unlike conditional statements prior I didn't need to add any new code. I changed the hash to equal the parameter num.
 
 9. I added three new tests, one passing the argument eighteen, one passing the argument fifteen, one passing the argument twelve.
+
+10. I need to figure out how to get currency larger than 25 to work as well as possibly refactor the code as code repeats.

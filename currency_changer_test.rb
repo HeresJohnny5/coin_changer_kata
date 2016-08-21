@@ -11,6 +11,18 @@ class TestCurrencyChanger < Minitest::Test
 	# 	assert_equal({:Quarter => 2}, generate_currency(50))
 	# end
 
+	def test_returns_hash_with_key_quarter_value_one_key_nickel_value_one_key_penny_value_three_when_passed_argument_thirty_eight
+		assert_equal({ :Quarter => 1, :Dime => 1, :Penny => 3 }, generate_currency(38))
+	end
+
+	def test_returns_hash_with_key_quarter_value_one_key_nickel_value_one_when_passed_argument_thirty
+		assert_equal({ :Quarter => 1, :Nickel => 1 }, generate_currency(30))
+	end
+
+	def test_returns_hash_with_key_quarter_value_one_key_penny_value_one_when_passed_argument_twenty_six
+		assert_equal({ :Quarter => 1, :Penny => 1 }, generate_currency(26))
+	end
+
 	def test_returns_hash_with_key_quarter_value_one_when_passed_argument_twenty_five
 		assert_equal({ :Quarter => 1 }, generate_currency(25))
 	end

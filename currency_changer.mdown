@@ -1,3 +1,6 @@
+# Currency Changer Kata
+---
+
 1. My first task was to create a currency_changer_test.rb boilerplate linking the test to currency_changer.rb.
 
 2. I then created a generic test to see if the function generate_currency would return a empty hash. I did this to make certain everything was in working order.

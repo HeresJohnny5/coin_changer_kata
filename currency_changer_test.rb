@@ -6,10 +6,10 @@ class TestCurrencyChanger < Minitest::Test
 # Class name MUST start w/ a capital letter and uses camelCase naming conventions
 # < Minitest::Test is boilerplate and is case sensative
 
-	# def test_returns_hash_with_key_quarter_value_two_when_passed_argument_fifty
-	# 	# function MUST start with 'test' and is case sensative
-	# 	assert_equal({:Quarter => 2}, generate_currency(50))
-	# end
+	def test_returns_hash_with_key_quarter_value_two_when_passed_argument_fifty
+		# function MUST start with 'test' and is case sensative
+		assert_equal({:Quarter => 2}, generate_currency(50))
+	end
 
 	def test_returns_hash_with_key_quarter_value_one_key_nickel_value_one_key_penny_value_three_when_passed_argument_thirty_eight
 		assert_equal({ :Quarter => 1, :Dime => 1, :Penny => 3 }, generate_currency(38))
